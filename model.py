@@ -11,9 +11,10 @@ import torch
 #     bnb_4bit_compute_dtype=torch.float16
 # )
 
-model_id = "delayedkarma/mistral-7b-text-to-sql_full-model"
-model = AutoModelForCausalLM.from_pretrained(model_id, device_map='auto')
+# device = "cuda" if torch.cuda.is_available() else "cpu"
 
+model_id = "delayedkarma/mistral-7b-text-to-sql_full-model"
+model = AutoModelForCausalLM.from_pretrained(model_id, device_map="auto")
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_size = "right"
