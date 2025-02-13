@@ -1,0 +1,7 @@
+transformers
+fastapi[standard]
+accelerate
+pandas
+streamlit
+uvicorn
+bitsandbytes
